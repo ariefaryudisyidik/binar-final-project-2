@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.binar.secondhand.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.binar.secondhand.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_notificationFragment2"
+            app:destination="@id/notificationFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+
+            android:id="@+id/action_homeFragment_to_searchFragment"
+            app:destination="@id/searchFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_homeFragment_to_productDetailFragment"
+            app:destination="@id/productDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/sellListFragment"
+        android:name="com.binar.secondhand.ui.sellerorder.SellerOrderFragment"
+        android:label="fragment_sell_list"
+        tools:layout="@layout/fragment_seller_order" >
+        <action
+            android:id="@+id/action_sellListFragment_to_bidderInfoFragment"
+            app:destination="@id/bidderInfoFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/sellFragment"
+        android:name="com.binar.secondhand.ui.sell.SellFragment"
+        android:label="fragment_sell"
+
+        tools:layout="@layout/fragment_sell" >
+        <action
+            android:id="@+id/action_sellFragment_to_cameraFragment"
+            app:destination="@id/cameraFragment" />
+        <action
+            android:id="@+id/action_sellFragment_to_sellListViewPagerFragment"
+            app:destination="@id/sellListViewPagerFragment" />
+        <action
+            android:id="@+id/action_sellFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/sellFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_sellFragment_to_previewSellFragment"
+            app:destination="@id/previewSellFragment" />
+        <action
+            android:id="@+id/action_sellFragment_to_editAccountFragment"
+            app:destination="@id/editAccountFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.binar.secondhand.ui.account.AccountFragment"
+        android:label="fragment_account"
+        tools:layout="@layout/fragment_account">
+        <action
+            android:id="@+id/action_accountFragment_to_accountSettingFragment2"
+            app:destination="@id/accountSettingFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_accountFragment_to_editAccountFragment"
+            app:destination="@id/editAccountFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_accountFragment_to_buyerOrderFragment"
+            app:destination="@id/buyerOrderFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_accountFragment_to_historyFragment"
+            app:destination="@id/historyFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_accountFragment_to_wishlistFragment"
+            app:destination="@id/wishlistFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.binar.secondhand.ui.notification.NotificationFragment"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" >
+        <action
+            android:id="@+id/action_notificationFragment_to_sellListFragment"
+            app:destination="@id/sellListFragment" />
+        <action
+            android:id="@+id/action_notificationFragment_to_sellerProductFragment"
+            app:destination="@id/sellerProductFragment" />
+        <action
+            android:id="@+id/action_notificationFragment_to_buyerOrderFragment"
+            app:destination="@id/buyerOrderFragment" />
+        <action
+            android:id="@+id/action_notificationFragment_to_bidderInfoFragment"
+            app:destination="@id/bidderInfoFragment" />
+        <action
+            android:id="@+id/action_notificationFragment_to_sellerProductDetailFragment"
+            app:destination="@id/sellerProductDetailFragment" />
+    </fragment>
+
+    <action
+        android:id="@+id/action_global_to_homeFragment"
+        app:destination="@id/homeFragment"
+        app:popUpTo="@id/loginFragment"
+        app:popUpToInclusive="true" />
+
+    <fragment
+        android:id="@+id/accountSettingFragment"
+        android:name="com.binar.secondhand.ui.account.accountsetting.AccountSettingFragment"
+        android:label="fragment_account_setting"
+        tools:layout="@layout/fragment_account_setting" />
+
+
+    <fragment
+        android:id="@+id/sellerProductFragment"
+        android:name="com.binar.secondhand.ui.sellerproduct.SellerProductFragment"
+        android:label="fragment_seller_product"
+        tools:layout="@layout/fragment_seller_product" >
+        <action
+            android:id="@+id/action_sellerProductFragment_to_sellListFragment"
+            app:destination="@id/sellListFragment" />
+        <action
+            android:id="@+id/action_sellerProductFragment_to_sellerProductDetailFragment"
+            app:destination="@id/sellerProductDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_sellerProductFragment_to_updateProductFragment"
+            app:destination="@id/updateProductFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/editAccountFragment"
+        android:name="com.binar.secondhand.ui.account.editaccount.EditAccountFragment"
+        android:label="fragment_edit_account"
+        tools:layout="@layout/fragment_edit_account">
+        <action
+            android:id="@+id/action_editAccountFragment_to_cameraFragment"
+            app:destination="@id/cameraFragment" />
+        <action
+            android:id="@+id/action_editAccountFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/editAccountFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.binar.secondhand.ui.register.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register">
+
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cameraFragment"
+        android:name="com.binar.secondhand.ui.camera.CameraFragment"
+        android:label="fragment_camera"
+        tools:layout="@layout/fragment_camera" />
+    <fragment
+
+        android:id="@+id/searchFragment"
+        android:name="com.binar.secondhand.ui.search.SearchFragment"
+        android:label="SearchFragment" >
+        <action
+            android:id="@+id/action_searchFragment_to_productDetailFragment"
+            app:destination="@id/productDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/sellListViewPagerFragment"
+        android:name="com.binar.secondhand.ui.sellerorder.SellerOrderViewPagerFragment"
+        android:label="fragment_sell_list_view_pager"
+        tools:layout="@layout/fragment_seller_order_view_pager" />
+    <fragment
+
+        android:id="@+id/previewSellFragment"
+        android:name="com.binar.secondhand.ui.sell.previewsellproduct.PreviewSellFragment"
+        android:label="fragment_preview_sell"
+        tools:layout="@layout/fragment_preview_sell" >
+        <argument
+            android:name="previewProduct"
+            app:argType="com.binar.secondhand.data.source.remote.request.PreviewProduct" />
+        <action
+            android:id="@+id/action_previewSellFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+        <fragment
+        android:id="@+id/sellerProductDetailFragment"
+        android:name="com.binar.secondhand.ui.sellerproduct.detail.SellerProductDetailFragment"
+        android:label="fragment_seller_product_detail"
+        tools:layout="@layout/fragment_seller_product_detail" >
+
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateProductFragment"
+        android:name="com.binar.secondhand.ui.sellerproduct.updateproduct.UpdateProductFragment"
+        android:label="fragment_update_product"
+        tools:layout="@layout/fragment_update_product" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_updateProductFragment_to_sellerProductFragment"
+            app:destination="@id/sellerProductFragment"
+            app:popUpTo="@id/updateProductFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_updateProductFragment_to_cameraFragment"
+            app:destination="@id/cameraFragment" />
+        </fragment>
+    <fragment
+
+        android:id="@+id/historyFragment"
+        android:name="com.binar.secondhand.ui.account.history.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" />
+    <fragment
+        android:id="@+id/bidderInfoFragment"
+        android:name="com.binar.secondhand.ui.bidderinfo.BidderInfoFragment"
+        android:label="fragment_bidder_info"
+        tools:layout="@layout/fragment_bidder_info" >
+        <argument
+            android:name="id"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_bidderInfoFragment_to_sellListFragment"
+            app:destination="@id/sellListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productDetailFragment"
+        android:name="com.binar.secondhand.ui.productdetail.ProductDetailFragment"
+        android:label="ProductDetailFragment">
+        <argument
+            android:name="id"
+            android:defaultValue="0"
+            app:argType="integer" />
+        <argument
+            android:name="message"
+            android:defaultValue="false"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/action_productDetailFragment_to_inputBidPriceBottomSheet"
+            app:destination="@id/inputBidPriceBottomSheet" />
+        <deepLink
+            android:id="@+id/deepLink"
+            app:uri="https://secondhand.com/product/{id}" />
+        <action
+            android:id="@+id/action_productDetailFragment_to_editAccountFragment"
+            app:destination="@id/editAccountFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/buyerOrderFragment"
+        android:name="com.binar.secondhand.ui.buyerorder.BuyerOrderFragment"
+        android:label="fragment_buyer_order"
+        tools:layout="@layout/fragment_buyer_order" >
+        <action
+            android:id="@+id/action_buyerOrderFragment_to_productDetailFragment"
+            app:destination="@id/productDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <dialog
+        android:id="@+id/inputBidPriceBottomSheet"
+        android:name="com.binar.secondhand.ui.productdetail.InputBidPriceBottomSheet"
+        android:label="InputBidPriceBottomSheet" >
+        <argument
+            android:name="product"
+            app:argType="com.binar.secondhand.data.source.remote.response.BuyerProductDetailResponse" />
+    </dialog>
+    <fragment
+        android:id="@+id/wishlistFragment"
+        android:name="com.binar.secondhand.ui.wishlist.WishlistFragment"
+        android:label="fragment_wishlist"
+        tools:layout="@layout/fragment_wishlist" >
+        <action
+            android:id="@+id/action_wishlistFragment_to_productDetailFragment"
+            app:destination="@id/productDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+
+</navigation>
